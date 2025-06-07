@@ -1,0 +1,134 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9fcff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000000;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: larger;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffeb3b;
+}
+
+.profile-container {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #0d0d0e;
+}
+
+h2 {
+    margin-top: 2rem;
+    color: #333;
+}
+.note-wrapper {
+  max-width: 500px;
+  margin: 0.5rem auto;
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+.note:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.note span {
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+
+.group {
+    background: white;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .note, .group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}
